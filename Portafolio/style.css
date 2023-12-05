@@ -5672,3 +5672,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .my-float{
 	margin-top:16px;
 }
+.intercalar{
+	transform: scale(1);
+	transition: 1s;
+}
+.intercalar:hover{
+	transition: ease-out 1.9s;
+	transform: scale(1.2);
+}

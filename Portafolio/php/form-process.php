@@ -4,42 +4,42 @@ $errorMSG = "";
 
 // NAME
 if (empty($_POST["name"])) {
-    $errorMSG = "Name is required ";
+    $errorMSG = "Su nombre es requerido ";
 } else {
     $name = $_POST["name"];
 }
 
 // EMAIL
 if (empty($_POST["email"])) {
-    $errorMSG .= "Email is required ";
+    $errorMSG .= "Correo requerido ";
 } else {
     $email = $_POST["email"];
 }
 
 // Subject Number
 if (empty($_POST["sub"])) {
-    $errorMSG .= "Subject is required ";
+    $errorMSG .= "Sujeto es requerido ";
 } else {
     $tel = $_POST["sub"];
 }
 
 // Tel Number
 if (empty($_POST["tel"])) {
-    $errorMSG .= "Tel is required ";
+    $errorMSG .= "Telefono requerido ";
 } else {
     $tel = $_POST["tel"];
 }
 
 // MESSAGE
 if (empty($_POST["message"])) {
-    $errorMSG .= "Message is required ";
+    $errorMSG .= "Su mensaje es requerido ";
 } else {
     $message = $_POST["message"];
 }
 
 
-$EmailTo = "dummy@gmail.com";
-$Subject = "New Message Received";
+$EmailTo = "jdavid.jarabm@gmail.com";
+$Subject = "Nuevo Mensaje Recibido";
 
 // prepare email body text
 $Body = "";
@@ -64,9 +64,9 @@ $success = mail($EmailTo, $Subject, $Body, "From:".$email);
 
 // redirect to success page
 if ($success && $errorMSG == ""){
-   echo "success";
+   echo "Enviado con éxito";
 }else{
-    if($errorMSG == ""){
+    if($errorMSG == "Algo salió mal :C"){
         echo "Something went wrong :(";
     } else {
         echo $errorMSG;
