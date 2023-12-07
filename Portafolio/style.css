@@ -1454,7 +1454,7 @@ mcwcCaption / .mcwcCaption
 }
 
 .mcwcCaption:before {
-	opacity: .88;
+	opacity: .99;
 	z-index: -1;
 }
 
